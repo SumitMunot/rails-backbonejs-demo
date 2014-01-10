@@ -1,0 +1,280 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-10 13:59:40 +0530
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 32ms
+
+ActiveRecord::StatementInvalid (Could not find table 'posts'):
+  app/controllers/posts_controller.rb:5:in `index'
+
+
+  Rendered /home/webwerks/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.6ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-10 13:59:46 +0530
+Processing by PostsController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::StatementInvalid (Could not find table 'posts'):
+  app/controllers/posts_controller.rb:5:in `index'
+
+
+  Rendered /home/webwerks/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/webwerks/.rvm/gems/ruby-1.9.3-p484/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.8ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (181.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (133.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (2.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreatePosts (20130704211048)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "content" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130704211048')[0m
+  [1m[35m (185.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-10 14:11:47 +0530
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (3.0ms)
+Compiled posts.css  (21ms)  (pid 12401)
+Compiled scaffolds.css  (11ms)  (pid 12401)
+Compiled application.css  (42ms)  (pid 12401)
+Compiled jquery.js  (1ms)  (pid 12401)
+Compiled jquery_ujs.js  (0ms)  (pid 12401)
+Compiled underscore.js  (0ms)  (pid 12401)
+Compiled backbone.js  (0ms)  (pid 12401)
+Compiled backbone_rails_sync.js  (0ms)  (pid 12401)
+Compiled backbone_datalink.js  (0ms)  (pid 12401)
+Compiled backbone/templates/posts/edit.js  (1ms)  (pid 12401)
+Compiled backbone/templates/posts/index.js  (0ms)  (pid 12401)
+Compiled backbone/templates/posts/new.js  (0ms)  (pid 12401)
+Compiled backbone/templates/posts/post.js  (0ms)  (pid 12401)
+Compiled backbone/templates/posts/show.js  (0ms)  (pid 12401)
+Compiled backbone/models/post.js  (120ms)  (pid 12401)
+Compiled backbone/views/posts/edit_view.js  (152ms)  (pid 12401)
+Compiled backbone/views/posts/index_view.js  (133ms)  (pid 12401)
+Compiled backbone/views/posts/new_view.js  (131ms)  (pid 12401)
+Compiled backbone/views/posts/post_view.js  (120ms)  (pid 12401)
+Compiled backbone/views/posts/show_view.js  (124ms)  (pid 12401)
+Compiled backbone/routers/posts_router.js  (129ms)  (pid 12401)
+Compiled backbone/backbone_test.js  (1147ms)  (pid 12401)
+Compiled posts.js  (131ms)  (pid 12401)
+Compiled application.js  (1370ms)  (pid 12401)
+Completed 200 OK in 1547ms (Views: 1513.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-10 14:11:49 +0530
+Served asset /application.css - 200 OK (3ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-01-10 14:11:49 +0530
+Served asset /posts.css - 200 OK (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-10 14:11:49 +0530
+Served asset /scaffolds.css - 200 OK (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-10 14:11:49 +0530
+Served asset /jquery.js - 200 OK (8ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-01-10 14:11:49 +0530
+Served asset /underscore.js - 200 OK (3ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-01-10 14:11:49 +0530
+Served asset /backbone.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-10 14:11:49 +0530
+Served asset /jquery_ujs.js - 200 OK (1ms)
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-01-10 14:11:49 +0530
+Served asset /backbone_rails_sync.js - 200 OK (4ms)
+
+
+Started GET "/assets/backbone/backbone_test.js?body=1" for 127.0.0.1 at 2014-01-10 14:11:49 +0530
+Served asset /backbone/backbone_test.js - 200 OK (24ms)
+
+
+Started GET "/assets/backbone/templates/posts/edit.js?body=1" for 127.0.0.1 at 2014-01-10 14:11:49 +0530
+Served asset /backbone/templates/posts/edit.js - 200 OK (1ms)
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-01-10 14:11:49 +0530
+Served asset /backbone_datalink.js - 200 OK (1ms)
+
+
+Started GET "/assets/backbone/templates/posts/index.js?body=1" for 127.0.0.1 at 2014-01-10 14:11:49 +0530
+Served asset /backbone/templates/posts/index.js - 200 OK (3ms)
+
+
+Started GET "/assets/backbone/templates/posts/new.js?body=1" for 127.0.0.1 at 2014-01-10 14:11:49 +0530
+Served asset /backbone/templates/posts/new.js - 200 OK (1ms)
+
+
+Started GET "/assets/backbone/templates/posts/post.js?body=1" for 127.0.0.1 at 2014-01-10 14:11:49 +0530
+Served asset /backbone/templates/posts/post.js - 200 OK (1ms)
+
+
+Started GET "/assets/backbone/templates/posts/show.js?body=1" for 127.0.0.1 at 2014-01-10 14:11:49 +0530
+Served asset /backbone/templates/posts/show.js - 200 OK (3ms)
+
+
+Started GET "/assets/backbone/models/post.js?body=1" for 127.0.0.1 at 2014-01-10 14:11:49 +0530
+Served asset /backbone/models/post.js - 200 OK (1ms)
+
+
+Started GET "/assets/backbone/views/posts/edit_view.js?body=1" for 127.0.0.1 at 2014-01-10 14:11:49 +0530
+Served asset /backbone/views/posts/edit_view.js - 200 OK (1ms)
+
+
+Started GET "/assets/backbone/views/posts/index_view.js?body=1" for 127.0.0.1 at 2014-01-10 14:11:49 +0530
+Served asset /backbone/views/posts/index_view.js - 200 OK (2ms)
+
+
+Started GET "/assets/backbone/views/posts/new_view.js?body=1" for 127.0.0.1 at 2014-01-10 14:11:49 +0530
+Served asset /backbone/views/posts/new_view.js - 200 OK (2ms)
+
+
+Started GET "/assets/backbone/views/posts/post_view.js?body=1" for 127.0.0.1 at 2014-01-10 14:11:49 +0530
+Served asset /backbone/views/posts/post_view.js - 200 OK (1ms)
+
+
+Started GET "/assets/backbone/views/posts/show_view.js?body=1" for 127.0.0.1 at 2014-01-10 14:11:49 +0530
+Served asset /backbone/views/posts/show_view.js - 200 OK (1ms)
+
+
+Started GET "/assets/backbone/routers/posts_router.js?body=1" for 127.0.0.1 at 2014-01-10 14:11:49 +0530
+Served asset /backbone/routers/posts_router.js - 200 OK (2ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-01-10 14:11:49 +0530
+Served asset /posts.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-10 14:11:49 +0530
+Served asset /application.js - 200 OK (47ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2014-01-10 14:11:59 +0530
+Processing by PostsController#create as JSON
+  Parameters: {"post"=>{"title"=>"New", "content"=>"pass"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (4.3ms)[0m  [1mINSERT INTO "posts" ("content", "created_at", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "pass"], ["created_at", Fri, 10 Jan 2014 08:41:59 UTC +00:00], ["title", "New"], ["updated_at", Fri, 10 Jan 2014 08:41:59 UTC +00:00]]
+  [1m[35m (144.8ms)[0m  commit transaction
+Completed 201 Created in 161ms (Views: 2.3ms | ActiveRecord: 149.2ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-01-10 14:16:26 +0530
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" [0m
+  Rendered posts/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 164ms (Views: 112.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-10 14:16:26 +0530
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2014-01-10 14:16:26 +0530
+Served asset /posts.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-10 14:16:26 +0530
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-01-10 14:16:26 +0530
+Served asset /underscore.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-10 14:16:26 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-10 14:16:26 +0530
+Served asset /jquery.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-01-10 14:16:26 +0530
+Served asset /backbone.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-01-10 14:16:26 +0530
+Served asset /backbone_rails_sync.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-01-10 14:16:26 +0530
+Served asset /backbone_datalink.js - 304 Not Modified (30ms)
+
+
+Started GET "/assets/backbone/backbone_test.js?body=1" for 127.0.0.1 at 2014-01-10 14:16:27 +0530
+Served asset /backbone/backbone_test.js - 304 Not Modified (25ms)
+
+
+Started GET "/assets/backbone/templates/posts/edit.js?body=1" for 127.0.0.1 at 2014-01-10 14:16:27 +0530
+Served asset /backbone/templates/posts/edit.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/backbone/templates/posts/index.js?body=1" for 127.0.0.1 at 2014-01-10 14:16:27 +0530
+Served asset /backbone/templates/posts/index.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/backbone/templates/posts/post.js?body=1" for 127.0.0.1 at 2014-01-10 14:16:27 +0530
+Served asset /backbone/templates/posts/post.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/backbone/templates/posts/new.js?body=1" for 127.0.0.1 at 2014-01-10 14:16:27 +0530
+Served asset /backbone/templates/posts/new.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/backbone/templates/posts/show.js?body=1" for 127.0.0.1 at 2014-01-10 14:16:27 +0530
+Served asset /backbone/templates/posts/show.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/backbone/models/post.js?body=1" for 127.0.0.1 at 2014-01-10 14:16:27 +0530
+Served asset /backbone/models/post.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/backbone/views/posts/edit_view.js?body=1" for 127.0.0.1 at 2014-01-10 14:16:27 +0530
+Served asset /backbone/views/posts/edit_view.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/backbone/views/posts/new_view.js?body=1" for 127.0.0.1 at 2014-01-10 14:16:27 +0530
+Served asset /backbone/views/posts/new_view.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/backbone/views/posts/index_view.js?body=1" for 127.0.0.1 at 2014-01-10 14:16:27 +0530
+Served asset /backbone/views/posts/index_view.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/backbone/views/posts/show_view.js?body=1" for 127.0.0.1 at 2014-01-10 14:16:27 +0530
+Served asset /backbone/views/posts/show_view.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/backbone/views/posts/post_view.js?body=1" for 127.0.0.1 at 2014-01-10 14:16:27 +0530
+Served asset /backbone/views/posts/post_view.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/backbone/routers/posts_router.js?body=1" for 127.0.0.1 at 2014-01-10 14:16:27 +0530
+Served asset /backbone/routers/posts_router.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2014-01-10 14:16:27 +0530
+Served asset /posts.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-10 14:16:27 +0530
+Served asset /application.js - 304 Not Modified (25ms)

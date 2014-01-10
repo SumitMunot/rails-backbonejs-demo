@@ -1,8 +1,6 @@
 rails-backbonejs-demo
 =====================
 
-Simple CRUD application of Blog using Rails 3 and BackboneJS.
+Simple CRUD application of Blog Rails Backbone Demo.
 
 Source: gem 'rails-backbone'
-
-
